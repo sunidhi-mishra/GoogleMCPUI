@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "google-gmail-docs-mcp": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-m", "google_mcp_server"]
+    }
+  }
+}

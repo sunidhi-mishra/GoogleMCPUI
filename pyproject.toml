@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "google-mcp-server"
+version = "0.1.0"
+description = "An MCP server for Google Gmail and Google Docs"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=1.0.0",
+  "google-api-python-client>=2.150.0",
+  "google-auth>=2.35.0",
+  "google-auth-httplib2>=0.2.0",
+  "google-auth-oauthlib>=1.2.1",
+  "streamlit>=1.39.0",
+]
+
+[project.scripts]
+google-mcp-server = "google_mcp_server.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
